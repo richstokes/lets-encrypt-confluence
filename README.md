@@ -5,10 +5,11 @@ At some point I may BASH-Scriptorize this. The following guide assumes default i
 
 
 ## Pre-requisits
-###Install java keytool or use the one under '/opt/atlassian/confluence/jre/bin'
-sudo apt install openjdk-9-jre-headless -Y
+### Install java keytool
+(or use the one under '/opt/atlassian/confluence/jre/bin')
+```bash sudo apt install openjdk-9-jre-headless -Y
 sudo mpdir -p /var/atlassian/keystores
-**cd /var/atlassian/keystores**
+cd /var/atlassian/keystores```
 
 
 ## 1. Create a new Java Keystore
