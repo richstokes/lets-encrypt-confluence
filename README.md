@@ -105,3 +105,10 @@ As confluence admin, change base URL in settings to be https://yourconfluencesit
 ## 12. Verify SSL is working 
 Check the cert in your browser, and/or by using an online tool such as https://www.digicert.com/help/
 
+
+As an optional extra you can redirect the original port to your new SSL port:
+
+```bash
+iptables -t nat -A PREROUTING -p tcp --dport 8090 -j REDIRECT --to-port 8443
+```
+
