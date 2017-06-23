@@ -28,7 +28,9 @@ keytool -certreq -alias simple-cert -keystore letsencrypt.jks -file jks-yourconf
 
 
 ## 3. Install CertBot (formally lets-encrypt-auto)
-git clone https://github.com/certbot/certbot.git
+```bash
+git clone https://github.com/certbot/certbot.git && cd certbot
+```
 
 
 ## 4. Request public certificate
