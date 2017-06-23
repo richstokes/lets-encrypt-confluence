@@ -6,9 +6,11 @@ At some point I may BASH-Scriptorize this. The following guide assumes default i
 
 # Pre-requisits
 ```bash 
-Install java keytool
+Install java keytool:
 (or use the one under '/opt/atlassian/confluence/jre/bin')
 sudo apt install openjdk-9-jre-headless -Y
+
+Create a new working directory:
 sudo mpdir -p /var/atlassian/keystores
 cd /var/atlassian/keystores
 ```
