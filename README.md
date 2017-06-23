@@ -18,12 +18,12 @@ cd /var/atlassian/keystores
 # Get a nice, free, public SSL Certificate for your Confluence site
 
 ## 1. Create a new Java Keystore
-keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letsencrypt.jks -dname "CN=appsbyrich.com" -storepass password123
+keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letsencrypt.jks -dname "CN=yourconfluencesite.com" -storepass password123
 
 
 ## 2. Create CSR
 ```bash
-keytool -certreq -alias simple-cert -keystore letsencrypt.jks -file jks-appsbyrich.com.csr -storepass password123 -ext san=dns:www.appsbyrich.com
+keytool -certreq -alias simple-cert -keystore letsencrypt.jks -file jks-yourconfluencesite.com.csr -storepass password123 -ext san=dns:www.yourconfluencesite.com
 ```
 
 
@@ -33,7 +33,7 @@ git clone https://github.com/certbot/certbot.git
 
 ## 4. Request public certificate
 ```bash
-./certbot-auto certonly --manual --csr /var/atlassian/keystores/jks-appsbyrich.com.csr --preferred-challenges "dns"
+./certbot-auto certonly --manual --csr /var/atlassian/keystores/jks-yourconfluencesite.com.csr --preferred-challenges "dns"
 ```
 
 
@@ -98,7 +98,7 @@ service confluence status
 
 
 ## 11. Change Base URL
-As confluence admin, change base URL in settings to be https://appsbyrich.com:8443
+As confluence admin, change base URL in settings to be https://yourconfluencesite.com:8443
 
 ## 12. Verify SSL is working 
 Check the cert in your browser, and/or by using an online tool such as https://www.digicert.com/help/
