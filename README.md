@@ -100,4 +100,6 @@ service confluence status
 ## 11. Change Base URL
 As confluence admin, change base URL in settings to be https://appsbyrich.com:8443
 
+## 12. Verify SSL is working 
+Check the cert in your browser, and/or by using an online tool such as https://www.digicert.com/help/
 
