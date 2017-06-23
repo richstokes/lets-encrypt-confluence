@@ -22,7 +22,9 @@ keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letse
 
 
 ## 2. Create CSR
+```bash
 keytool -certreq -alias simple-cert -keystore letsencrypt.jks -file jks-appsbyrich.com.csr -storepass password123 -ext san=dns:www.appsbyrich.com
+```
 
 
 ## 3. Install CertBot (formally lets-encrypt-auto)
@@ -30,7 +32,10 @@ git clone https://github.com/certbot/certbot.git
 
 
 ## 4. Request public certificate
+```bash
 ./certbot-auto certonly --manual --csr /var/atlassian/keystores/jks-appsbyrich.com.csr --preferred-challenges "dns"
+```
+
 
 ## 5. Verify DNS ownership
 When prompted by CLI tool, add verification records to DNS.
@@ -56,7 +61,9 @@ cd /var/atlassian/keystores
 ```
 
 ## 8. Import new public certificate into your Java Keystore
+```bash
 keytool -importcert -alias simple-cert -keystore letsencrypt.jks -storepass password123 -file 0001_chain.pem
+```
 Answer the messaage: "..is not trusted. Install reply anyway? [no]:"  yes
 You should see "Certificate reply was installed in keystore"
 
@@ -82,9 +89,12 @@ Here's a working example:
 ```
 
 ##10. Restart Confluence
+```bash
 service confluence stop
 service confluence start
-service confluence status  - Review/fix any errors
+service confluence status
+``` 
+- Review/fix any errors
 
 
 ##11. Change Base URL
