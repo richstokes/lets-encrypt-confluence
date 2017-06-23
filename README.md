@@ -50,8 +50,10 @@ IMPORTANT NOTES:
 ```
 
 ## 7. Move new certificate up into your keystore directory
+```bash
 mv *.pem /var/atlassian/keystores
 cd /var/atlassian/keystores
+```
 
 ## 8. Import new public certificate into your Java Keystore
 keytool -importcert -alias simple-cert -keystore letsencrypt.jks -storepass password123 -file 0001_chain.pem
