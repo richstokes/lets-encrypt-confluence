@@ -4,13 +4,16 @@ Generate and install a free lets-encrypt SSL Certificate on your Confluence site
 At some point I may BASH-Scriptorize this. The following guide assumes default install locations for Confluence. Adjust paths and domain name as needed.
 
 
-## Pre-requisits
-### Install java keytool
+# Pre-requisits
+## Install java keytool
 (or use the one under '/opt/atlassian/confluence/jre/bin')
-```bash sudo apt install openjdk-9-jre-headless -Y
+```bash 
+sudo apt install openjdk-9-jre-headless -Y
 sudo mpdir -p /var/atlassian/keystores
-cd /var/atlassian/keystores```
+cd /var/atlassian/keystores
+```
 
+# Get a nice, free, public SSL Certificate for your Confluence site
 
 ## 1. Create a new Java Keystore
 keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letsencrypt.jks -dname "CN=appsbyrich.com" -storepass hunter22
