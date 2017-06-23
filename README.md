@@ -18,7 +18,7 @@ cd /var/atlassian/keystores
 # Get a nice, free, public SSL Certificate for your Confluence site
 
 ## 1. Create a new Java Keystore
-keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letsencrypt.jks -dname "CN=appsbyrich.com" -storepass hunter22
+keytool -genkeypair -alias simple-cert -keyalg RSA -keysize 2048 -keystore letsencrypt.jks -dname "CN=appsbyrich.com" -storepass password123
 
 
 ## 2. Create CSR
