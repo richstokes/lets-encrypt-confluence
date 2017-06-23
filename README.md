@@ -4,7 +4,7 @@ Generate and install a free lets-encrypt SSL Certificate on your Confluence site
 At some point I may BASH-Scriptorize this. The following guide assumes default install locations for Confluence. Adjust paths and domain name as needed.
 
 
-# Pre-requisits
+# Prerequisites
 ```bash 
 Install java keytool:
 (or use the one under '/opt/atlassian/confluence/jre/bin')
