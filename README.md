@@ -88,7 +88,7 @@ Here's a working example:
 />
 ```
 
-##10. Restart Confluence
+## 10. Restart Confluence
 ```bash
 service confluence stop
 service confluence start
@@ -97,6 +97,7 @@ service confluence status
 - Review/fix any errors
 
 
-##11. Change Base URL
+## 11. Change Base URL
 As confluence admin, change base URL in settings to be https://appsbyrich.com:8443
+
 
