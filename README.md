@@ -73,9 +73,9 @@ You should see "Certificate reply was installed in keystore"
 ## 9. Edit the confluence server.xml file
 /opt/atlassian/confluence/conf/server.xml
 
-Uncomment SSL connector section
-set password
-set keystoreFile="/var/atlassian/keystoresletsencrypt.jks"
+- Uncomment SSL connector section
+- set password
+- set keystoreFile="/var/atlassian/keystoresletsencrypt.jks"
 
 Here's a working example:
 ```
